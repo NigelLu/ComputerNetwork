@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # configure R1 for AREA 0
 vtysh << EOC
 configure terminal

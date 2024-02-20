@@ -4,17 +4,17 @@
 vtysh << EOC
 configure terminal
 
-# configure R2 for AREA 0
-interface eth0
-ip address 10.10.10.2/29
-
-# configure R2 for R2-R3
+# configure R4 for R2-R4
 interface eth1
-ip address 10.10.11.1/30
+ip address 10.10.11.6/30
 
-# configure R2 for R2-R4
+# configure R4 for R3-R4
+interface eth0
+ip address 10.10.11.10/30
+
+#configure R4 for DHCP
 interface eth2
-ip address 10.10.11.5/30
+ip address 10.10.11.17/28
 
 end
 write
