@@ -1,4 +1,7 @@
-vtysh
+#!/bin/bash
+
+# Redirecting multiple commands to vtysh using a here document
+vtysh << EOC
 configure terminal
 # configure R2 for AREA 0
 interface eth0
@@ -12,4 +15,7 @@ ip address 10.10.11.5/30
 end
 write
 exit
-echo Config script exited with code 0
+EOC
+
+# Echo a message upon script completion
+echo "Config script exited with code 0"
